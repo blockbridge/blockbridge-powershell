@@ -6,16 +6,13 @@ These PowerShell scripts are provided as a refence to illustate how to wrap Bloc
 
   * `-s/-secret secretFile.txt`
     
-       Secret file contains Authentication Token encrypted using Windows login credentials. The script must be run within the context of the same user.  
-   **To store generated Authorization token in secretfile.txt execute the follow powershell command line:**  
-   ```'AuthTokenString'|ConvertTo-SecureString -AsPlainText -Force|ConvertFrom-SecureString|Set-Content -Path secretfile.txt```
-    
+       Secret file contains Authentication Token encrypted using Windows login credentials. The script must be run within the context of the same user.
    If secret file is not used, the script must be edited and $AuthToken variable set.
  
  
   * `-h/-bb ControlPlaneHost`
   
-   Specifies hostname of the Blockbridge API end-point. If not specified $BB_ControlPlane must be set in file.
+     Specifies hostname of the Blockbridge API end-point. If not specified $BB_ControlPlane must be set in file.
   
   
 
@@ -60,6 +57,11 @@ bb user create --name $SNAPUSER --grant vss.manage_snapshots
 ````
 bb authorization create --user $SNAPUSER@$BBUSER --scope 'v:o=all v:r=manage_snapshots'
 ````
+
+#### To store generated Authorization token in secretfile.txt execute the follow powershell command line: 
+```
+'AuthTokenString'|ConvertTo-SecureString -AsPlainText -Force|ConvertFrom-SecureString|Set-Content -Path secretfile.txt
+```
 
 ## To avoid having to approve self-signed certificate, please follow this guide to install a properly signed SSL cert:
 https://kb.blockbridge.com/guide/custom-certs/
