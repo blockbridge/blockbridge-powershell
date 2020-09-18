@@ -37,7 +37,11 @@ These PowerShell scripts are provided as a refence to illustate how to wrap Bloc
  
  Example 2: `powershell -command ./bb_add_snapshot.ps1 -h dogfood -s secretfile.txt -d disk-1 -v service-1`
  
- Example 3: `powershell -command ./bb_remove_snapshot_older_than_days.ps1 -h dogfood -s secretfile.txt -d 30`
+ Example 3: `powershell -command ./bb_add_snapshot.ps1 -t snapSchedule`
+ 
+ Example 4: `powershell -command ./bb_remove_snapshot_older_than_days.ps1 -h dogfood -s secretfile.txt -d 30`
+ 
+ Example 5: `powershell -command ./bb_remove_snapshot_older_than_days.ps1 -d 30`
  
 ## Quick Start
 
