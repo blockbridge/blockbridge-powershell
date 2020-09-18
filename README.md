@@ -6,8 +6,9 @@ These PowerShell scripts are provided as a refence to illustate how to wrap Bloc
 
   * `-s/-secret secretFile.txt`
     
-       Secret file contains Authentication Token encrypted using Windows login credentials. The script must be run within the context of the same user:  
-   ``` 'AuthTokenString' |  ConvertTo-SecureString -AsPlainText -Force | ConvertFrom-SecureString |  Set-Content -Path secretfile.txt ```
+       Secret file contains Authentication Token encrypted using Windows login credentials. The script must be run within the context of the same user.  
+   **To store generated Authorization token in secretfile.txt execute the follow powershell command line:**  
+   ```'AuthTokenString'|ConvertTo-SecureString -AsPlainText -Force|ConvertFrom-SecureString|Set-Content -Path secretfile.txt```
     
    If secret file is not used, the script must be edited and $AuthToken variable set.
  
