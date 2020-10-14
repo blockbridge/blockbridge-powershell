@@ -51,7 +51,7 @@ export BBUSER=account_with_storage
 export SNAPUSER=snapmgmt
 ````
 
-#### Create a new user in BBUSER account which is only allowed to manage snapshots and Authorization tokens
+#### Create a new user in BBUSER account which is only allowed to manage snapshots
 ````
 bb auth login --user $BBUSER
 bb user create --name $SNAPUSER --grant vss.manage_snapshots
