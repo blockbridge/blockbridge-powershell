@@ -62,6 +62,8 @@ bb user create --name $SNAPUSER --grant vss.manage_snapshots
 bb authorization create --user $SNAPUSER@$BBUSER --scope 'v:o=all v:r=manage_snapshots'
 ````
 
+### Run on your Windows/Powershell Control host:
+
 #### To store generated Authorization token in secretfile.txt execute the follow powershell command line: 
 ```
 'AuthTokenString'|ConvertTo-SecureString -AsPlainText -Force|ConvertFrom-SecureString|Set-Content -Path secretfile.txt
