@@ -63,6 +63,7 @@ bb authorization create --user $SNAPUSER@$BBUSER --scope 'v:o=all v:r=manage_sna
 ````
 
 ### Run on your Windows/Powershell Control host:
+Secret file contains Authentication Token encrypted using Windows login credentials. The encryption must be done within the context of the same user that will be running the script.
 
 #### To store generated Authorization token in secretfile.txt execute the follow powershell command line: 
 ```
